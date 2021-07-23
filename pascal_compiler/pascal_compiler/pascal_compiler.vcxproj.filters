@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer">
+      <UniqueIdentifier>{8c826374-8606-4053-a9c1-81f43dae7fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer\tokens">
+      <UniqueIdentifier>{4bbc58c7-680f-4646-b949-365168c14611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer\tokens\enums">
+      <UniqueIdentifier>{c7686a11-ac23-44f8-82b9-63ac2d8da0d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums">
+      <UniqueIdentifier>{acda4084-b90c-4bab-b07f-37e1fcecdc2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer\tokens\interfaces">
+      <UniqueIdentifier>{085b67f8-804c-443c-bb77-96631ef6efb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\lexicalAnalyzer">
+      <UniqueIdentifier>{0f37ba99-c96f-4c9a-8626-91f0e287afcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\lexicalAnalyzer\tokens\variants">
+      <UniqueIdentifier>{1afeb866-6412-4043-8db6-9a6c4a3142d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\compiler">
+      <UniqueIdentifier>{e48bc3e8-1602-4400-a680-0be7368f0c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\compiler">
+      <UniqueIdentifier>{17cd07aa-1d4c-4dbe-ad62-2254e17e33b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\semanticAnalyzer">
+      <UniqueIdentifier>{b2852553-9df0-4ed1-9481-64fcc588b45a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\semanticAnalyzer">
+      <UniqueIdentifier>{21c0ed18-a7b6-413d-9e8c-e3ab04402af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\codeGenerator">
+      <UniqueIdentifier>{b29ed63c-4af7-4495-97bc-c1a51347b347}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\codeGenerator">
+      <UniqueIdentifier>{e227553c-6036-4cab-8bcb-728350fc1cc3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Automata.cpp">
+      <Filter>Source Files\lexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="AutomataTransitionsFunctions.cpp">
+      <Filter>Source Files\lexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="StringHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzer.cpp">
+      <Filter>Source Files\lexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicalAnalyzerDict.cpp">
+      <Filter>Source Files\lexicalAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionAndMinions.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="CompositeOperator.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="VariableSection.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="Operators.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="VariableAndConstant.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="TypesSection.cpp">
+      <Filter>Source Files\compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="SemanticTable.cpp">
+      <Filter>Source Files\semanticAnalyzer</Filter>
+    </ClCompile>
+    <ClCompile Include="codeGenerator.cpp">
+      <Filter>Source Files\codeGenerator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ETokenType.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="EValueType.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="EOperationType.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="EAdditiveOperation.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="EComparisonOperation.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="EKeyWord.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="EMultiplicativeOperation.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="EOpenBraket.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="ESystemSymbol.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="ETypeWord.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="ELexicalErrorType.h">
+      <Filter>Header Files\lexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="ECloseBracket.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums\operationTypeEnums</Filter>
+    </ClInclude>
+    <ClInclude Include="IdentifierToken.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens</Filter>
+    </ClInclude>
+    <ClInclude Include="OperationEnumWrapper.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\enums</Filter>
+    </ClInclude>
+    <ClInclude Include="OperationToken.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens</Filter>
+    </ClInclude>
+    <ClInclude Include="IToken.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="StringHelpers.h">
+      <Filter>Header Files\lexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="IError.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Automata.h">
+      <Filter>Header Files\lexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalAnalyzer.h">
+      <Filter>Header Files\lexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="LexicalError.h">
+      <Filter>Header Files\lexicalAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="IVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="StringVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\variants</Filter>
+    </ClInclude>
+    <ClInclude Include="IntVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\variants</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\variants</Filter>
+    </ClInclude>
+    <ClInclude Include="CharVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\variants</Filter>
+    </ClInclude>
+    <ClInclude Include="ValueToken.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenOstream.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler.h">
+      <Filter>Header Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="BoolVariant.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens\variants</Filter>
+    </ClInclude>
+    <ClInclude Include="CorruptedToken.h">
+      <Filter>Header Files\lexicalAnalyzer\tokens</Filter>
+    </ClInclude>
+    <ClInclude Include="IType.h">
+      <Filter>Header Files\semanticAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="SemanticError.h">
+      <Filter>Header Files\semanticAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="SemanticTable.h">
+      <Filter>Header Files\semanticAnalyzer</Filter>
+    </ClInclude>
+    <ClInclude Include="ASTReturn.h">
+      <Filter>Header Files\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="codeGenerator.h">
+      <Filter>Header Files\codeGenerator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

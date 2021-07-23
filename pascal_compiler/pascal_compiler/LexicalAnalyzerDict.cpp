@@ -1,0 +1,77 @@
+#include "LexicalAnalyzer.h"
+
+std::map<OperationEnumWrapper, std::string> LexicalAnalyzer::reverseKeywordDict = {};
+std::map<std::string, OperationEnumWrapper> LexicalAnalyzer::keywordDict = {
+	{"+", EAdditiveOperation::Plus},
+	{"-", EAdditiveOperation::Minus},
+	{"or", EAdditiveOperation::Or},
+
+	{"and", EMultiplicativeOperation::And},
+	{"div", EMultiplicativeOperation::Div},
+	{"/", EMultiplicativeOperation::Divide},
+	{"mod", EMultiplicativeOperation::Mod},
+	{"*", EMultiplicativeOperation::Multiply},
+
+	{"=", EComparisonOperation::Equal},
+	{"in", EComparisonOperation::In},
+	{"<", EComparisonOperation::Less},
+	{"<=", EComparisonOperation::LessEqual},
+	{">", EComparisonOperation::Greater},
+	{">=", EComparisonOperation::GreaterEqual},
+	{"<>", EComparisonOperation::NotEqual},
+
+	{"}", ECloseBracket::CloseCurlyBracket},
+	{")", ECloseBracket::CloseRoundBracket},
+	{"]", ECloseBracket::CloseSquareBracket},
+
+	{"{", EOpenBracket::OpenCurlyBracket},
+	{"(", EOpenBracket::OpenRoundBracket},
+	{"[", EOpenBracket::OpenSquareBracket},
+
+	{":=", ESystemSymbol::Assign},
+	{":", ESystemSymbol::Colon},
+	{",", ESystemSymbol::Comma},
+	{".", ESystemSymbol::Dot},
+	{"..", ESystemSymbol::Range},
+	{";", ESystemSymbol::Semicolon},
+
+	//{"boolean", ETypeWord::Boolean},
+	//{"char", ETypeWord::Char},
+	//{"integer", ETypeWord::Integer},
+	//{"real", ETypeWord::Real},
+	//{"string", ETypeWord::String},
+
+	{"array", EKeyWord::Array},
+	{"begin", EKeyWord::Begin},
+	{"case", EKeyWord::Case},
+	{"const", EKeyWord::Const},
+	{"do", EKeyWord::Do},
+	{"downto", EKeyWord::Downto},
+	{"else", EKeyWord::Else},
+	{"end", EKeyWord::End},
+	//{"false", EKeyWord::False},
+	{"file", EKeyWord::File},
+	{"for", EKeyWord::For},
+	{"function", EKeyWord::Function},
+	{"goto", EKeyWord::Goto},
+	{"if", EKeyWord::If},
+	{"label", EKeyWord::Label},
+	{"nil", EKeyWord::Nil},
+	{"not", EKeyWord::Not},
+	{"packed", EKeyWord::Packed},
+	{"procedure", EKeyWord::Procedure},
+	{"program", EKeyWord::Program},
+	{"record", EKeyWord::Record},
+	{"repeat", EKeyWord::Repeat},
+	{"set", EKeyWord::Set},
+	{"then", EKeyWord::Then},
+	{"to", EKeyWord::To},
+	//{"true", EKeyWord::True},
+	{"type", EKeyWord::Type},
+	{"until", EKeyWord::Until},
+	{"var", EKeyWord::Var},
+	{"while", EKeyWord::While},
+	{"of", EKeyWord::Of},
+
+
+};

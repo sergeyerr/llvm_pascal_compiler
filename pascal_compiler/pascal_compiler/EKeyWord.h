@@ -1,0 +1,38 @@
+#pragma once
+#include "EOperationType.h"
+
+enum EKeyWord {
+	__begin__key__ = EOperationType::KeyWord,
+	Program,
+	Not,
+	Label,
+	Const,
+	Type,
+	Packed,
+	Array,
+	Begin,
+	End,
+	Record,
+	Case,
+	Set,
+	File,
+	Var,
+	Procedure,
+	Function,
+	Nil,
+	Goto,
+	If,
+	Then,
+	Else,
+	While,
+	Do,
+	Repeat,
+	Until,
+	For,
+	To,
+	Downto,
+	//True,
+	//False,
+	Of,
+	__end__key__
+};

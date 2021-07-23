@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.props" Condition="Exists('..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.props')" />
+  <Import Project="..\packages\Llvm.Libs.targets.x86-Release.5.0.1\build\native\Llvm.Libs.targets.x86-Release.props" Condition="Exists('..\packages\Llvm.Libs.targets.x86-Release.5.0.1\build\native\Llvm.Libs.targets.x86-Release.props')" />
+  <Import Project="..\packages\Llvm.Libs.targets.x86-Debug.5.0.1\build\native\Llvm.Libs.targets.x86-Debug.props" Condition="Exists('..\packages\Llvm.Libs.targets.x86-Debug.5.0.1\build\native\Llvm.Libs.targets.x86-Debug.props')" />
+  <Import Project="..\packages\Llvm.Libs.targets.x64-Release.5.0.1\build\native\Llvm.Libs.targets.x64-Release.props" Condition="Exists('..\packages\Llvm.Libs.targets.x64-Release.5.0.1\build\native\Llvm.Libs.targets.x64-Release.props')" />
+  <Import Project="..\packages\Llvm.Libs.targets.x64-Debug.5.0.1\build\native\Llvm.Libs.targets.x64-Debug.props" Condition="Exists('..\packages\Llvm.Libs.targets.x64-Debug.5.0.1\build\native\Llvm.Libs.targets.x64-Debug.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.x86-Release.5.0.1\build\native\Llvm.Libs.core.x86-Release.props" Condition="Exists('..\packages\Llvm.Libs.core.x86-Release.5.0.1\build\native\Llvm.Libs.core.x86-Release.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.x86-Debug.5.0.1\build\native\Llvm.Libs.core.x86-Debug.props" Condition="Exists('..\packages\Llvm.Libs.core.x86-Debug.5.0.1\build\native\Llvm.Libs.core.x86-Debug.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.x64-Release.5.0.1\build\native\Llvm.Libs.core.x64-Release.props" Condition="Exists('..\packages\Llvm.Libs.core.x64-Release.5.0.1\build\native\Llvm.Libs.core.x64-Release.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.x64-Debug.5.0.1\build\native\Llvm.Libs.core.x64-Debug.props" Condition="Exists('..\packages\Llvm.Libs.core.x64-Debug.5.0.1\build\native\Llvm.Libs.core.x64-Debug.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.pdbs.x86-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x86-Debug.props" Condition="Exists('..\packages\Llvm.Libs.core.pdbs.x86-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x86-Debug.props')" />
+  <Import Project="..\packages\Llvm.Libs.core.pdbs.x64-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x64-Debug.props" Condition="Exists('..\packages\Llvm.Libs.core.pdbs.x64-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x64-Debug.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{fe6fdaa0-740d-40a9-8e77-268d4bed51c1}</ProjectGuid>
+    <RootNamespace>pascalcompiler</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Automata.cpp" />
+    <ClCompile Include="AutomataTransitionsFunctions.cpp" />
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="codeGenerator.cpp" />
+    <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="LexicalAnalyzer.cpp" />
+    <ClCompile Include="LexicalAnalyzerDict.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CompositeOperator.cpp" />
+    <ClCompile Include="Operators.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="ExpressionAndMinions.cpp" />
+    <ClCompile Include="SemanticTable.cpp" />
+    <ClCompile Include="StringHelpers.cpp" />
+    <ClCompile Include="TypesSection.cpp" />
+    <ClCompile Include="VariableAndConstant.cpp" />
+    <ClCompile Include="VariableSection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ASTReturn.h" />
+    <ClInclude Include="Automata.h" />
+    <ClInclude Include="BoolVariant.h" />
+    <ClInclude Include="CharVariant.h" />
+    <ClInclude Include="codeGenerator.h" />
+    <ClInclude Include="Compiler.h" />
+    <ClInclude Include="CorruptedToken.h" />
+    <ClInclude Include="EAdditiveOperation.h" />
+    <ClInclude Include="ECloseBracket.h" />
+    <ClInclude Include="EComparisonOperation.h" />
+    <ClInclude Include="EKeyWord.h" />
+    <ClInclude Include="ELexicalErrorType.h" />
+    <ClInclude Include="EMultiplicativeOperation.h" />
+    <ClInclude Include="EOpenBraket.h" />
+    <ClInclude Include="EOperationType.h" />
+    <ClInclude Include="ESystemSymbol.h" />
+    <ClInclude Include="ETokenType.h" />
+    <ClInclude Include="ETypeWord.h" />
+    <ClInclude Include="EValueType.h" />
+    <ClInclude Include="FloatVariant.h" />
+    <ClInclude Include="IdentifierToken.h" />
+    <ClInclude Include="IError.h" />
+    <ClInclude Include="IntVariant.h" />
+    <ClInclude Include="IToken.h" />
+    <ClInclude Include="IType.h" />
+    <ClInclude Include="SemanticError.h" />
+    <ClInclude Include="SemanticTable.h" />
+    <ClInclude Include="TokenOstream.h" />
+    <ClInclude Include="ValueToken.h" />
+    <ClInclude Include="IVariant.h" />
+    <ClInclude Include="LexicalAnalyzer.h" />
+    <ClInclude Include="LexicalError.h" />
+    <ClInclude Include="OperationEnumWrapper.h" />
+    <ClInclude Include="OperationToken.h" />
+    <ClInclude Include="StringHelpers.h" />
+    <ClInclude Include="StringVariant.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.targets" Condition="Exists('..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.pdbs.x64-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x64-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.pdbs.x64-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x64-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.pdbs.x86-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x86-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.pdbs.x86-Debug.5.0.1\build\native\Llvm.Libs.core.pdbs.x86-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.x64-Debug.5.0.1\build\native\Llvm.Libs.core.x64-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.x64-Debug.5.0.1\build\native\Llvm.Libs.core.x64-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.x64-Release.5.0.1\build\native\Llvm.Libs.core.x64-Release.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.x64-Release.5.0.1\build\native\Llvm.Libs.core.x64-Release.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.x86-Debug.5.0.1\build\native\Llvm.Libs.core.x86-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.x86-Debug.5.0.1\build\native\Llvm.Libs.core.x86-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.core.x86-Release.5.0.1\build\native\Llvm.Libs.core.x86-Release.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.core.x86-Release.5.0.1\build\native\Llvm.Libs.core.x86-Release.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.targets.x64-Debug.5.0.1\build\native\Llvm.Libs.targets.x64-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.targets.x64-Debug.5.0.1\build\native\Llvm.Libs.targets.x64-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.targets.x64-Release.5.0.1\build\native\Llvm.Libs.targets.x64-Release.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.targets.x64-Release.5.0.1\build\native\Llvm.Libs.targets.x64-Release.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.targets.x86-Debug.5.0.1\build\native\Llvm.Libs.targets.x86-Debug.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.targets.x86-Debug.5.0.1\build\native\Llvm.Libs.targets.x86-Debug.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.targets.x86-Release.5.0.1\build\native\Llvm.Libs.targets.x86-Release.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.targets.x86-Release.5.0.1\build\native\Llvm.Libs.targets.x86-Release.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.props'))" />
+    <Error Condition="!Exists('..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Llvm.Libs.5.0.1\build\native\Llvm.Libs.targets'))" />
+  </Target>
+</Project>

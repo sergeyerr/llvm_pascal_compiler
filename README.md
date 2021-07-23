@@ -1,1 +1,2 @@
-llvm_pascal_compiler
+## Компилятор Pascal by Sergei Voloboev
+# Смотреть содержимое через visual studio!
